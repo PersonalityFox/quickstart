@@ -27,11 +27,7 @@ src/
 * * * * &.less
 * * * * wrapper.less
 
-<<<<<<< Updated upstream
-With results like:
-=======
 Result:
->>>>>>> Stashed changes
 
 <pre><span class="pl-ent">a</span> {}
 <span class="pl-ent">html</span> <span class="pl-k">&gt;</span> <span class="pl-ent">body</span> {}
