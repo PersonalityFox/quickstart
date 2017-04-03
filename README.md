@@ -2,6 +2,13 @@
 
 ## Quickstart with less and typescript.
 
+
+### Usage
+
+1. `npm install`.
+2. Usage gulp tasks 'build' for create a prod version.
+
+
 ### Less
 
 Used **`CSS nesting by directory gulp plugin`** with npm module **gulp-css-nbd** v. 0.0.2
@@ -29,7 +36,7 @@ src/
 
 Result:
 
-<pre><span class="pl-ent">a</span> {}
+<pre><span class="pl-ent">html</span> {}
 <span class="pl-ent">html</span> <span class="pl-k">&gt;</span> <span class="pl-ent">body</span> {}
 <span class="pl-ent">html</span> <span class="pl-k">&gt;</span> <span class="pl-ent">body</span> <span class="pl-k">&gt;</span> <span class="pl-ent">header</span> {}
 <span class="pl-ent">html</span> <span class="pl-k">&gt;</span> <span class="pl-ent">body</span> <span class="pl-k">&gt;</span> <span class="pl-ent">main</span> {}
@@ -37,4 +44,11 @@ Result:
 <span class="pl-ent">html</span> <span class="pl-k">&gt;</span> <span class="pl-ent">body</span> <span class="pl-k">&gt;</span> <span class="pl-ent">main</span> <span class="pl-k">&gt;</span> <span class="pl-ent">h2</span> {}
 <span class="pl-ent">html</span> <span class="pl-k">&gt;</span> <span class="pl-ent">body</span> <span class="pl-k">&gt;</span> <span class="pl-ent">main</span> <span class="pl-k">&gt;</span> <span class="pl-ent">h3</span>, <span class="pl-ent">html</span> <span class="pl-k">&gt;</span> <span class="pl-ent">body</span> <span class="pl-k">&gt;</span> <span class="pl-ent">main</span> <span class="pl-k">&gt;</span> <span class="pl-ent">h4</span> {}</pre>
 
-------------------------------
+
+### TypeScript
+
+Main file `/scripts/main.ts`.
+
+Gulp tasks `js` build your app.
+
+Use a modular system src/modules/YOUR_MODULE_FILE.ts and src/classes/YOUR_EXPORT_CLASS.ts where one modules = one functional.
