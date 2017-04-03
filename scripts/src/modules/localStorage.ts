@@ -1,7 +1,7 @@
-import LocalStorage from '../classes/temp/LocalStorage';
+import LocalStorage from '../classes/LocalStorage';
 
 export default function init(): void
 {
-	var localS: LocalStorage;
-	localS = new LocalStorage( 'localStoooooooor' );
+	let localStorage: LocalStorage;
+	localStorage = new LocalStorage( 'localStorage start' );
 }

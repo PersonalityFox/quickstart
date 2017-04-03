@@ -15,3 +15,7 @@ findBug();
 callMe();
 iWantOrder();
 filter();*/
+
+import localStorage from './src/modules/localStorage'
+
+localStorage();
