@@ -1,0 +1,25 @@
+{
+  "name": "application-test-build",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-css-nbd": "0.0.2",
+    "gulp-csso": "^3.0.0",
+    "gulp-duration": "0.0.0",
+    "gulp-html-minify": "0.0.14",
+    "gulp-image": "^2.7.6",
+    "gulp-less": "^3.3.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "less-plugin-autoprefix": "^1.5.1",
+    "run-sequence": "^1.2.2",
+    "tsify": "^3.0.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
