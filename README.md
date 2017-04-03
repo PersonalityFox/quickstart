@@ -8,6 +8,11 @@
 1. `npm install`.
 2. Usage gulp tasks 'build' for create a prod version.
 
+Your project clone to `_prod`.
+
+css file  - /styles/common.css
+js file - /scripts/common.js
+
 
 ### Less
 
