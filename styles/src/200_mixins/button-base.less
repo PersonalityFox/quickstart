@@ -1,0 +1,80 @@
+.mixin-button-base()
+{
+	//@height: @module * 2.5;
+	//@height-mobile: round(@module * 1.75);
+	//@min-width: @module * 5;
+	//@max-width: @module * 14;
+
+	@text-button: 14px;
+	//@text-button-mobile: 14px;
+
+	@clr-text: @clr-bg;
+	@clr-button: fade( @clr-main, 70% );
+	@clr-button-inactive: fade( @clr-fg, 30% );
+
+	//
+
+	@padding-top: 9px;
+	@padding-left-right: 15px;
+	@padding-bottom: 6px;
+	@padding-left: 35px;
+
+	position: relative;
+
+	display: inline-block;
+	overflow: hidden;
+
+	/*height: @height;
+	min-width: @min-width;
+	max-width: @max-width;*/
+	padding: @padding-top @padding-left-right @padding-bottom @padding-left;
+
+	font-family: @font-lato;
+	font-size: @text-button;
+	font-weight: 500;
+	//letter-spacing: .07em;
+	//line-height: @height;
+	white-space: nowrap;
+	text-align: center;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	text-transform: none;
+
+	color: @clr-text;
+	background: @clr-button-inactive;
+	outline: none;
+	cursor: pointer;
+
+	border: none;
+
+	&.current
+	{
+		background: @clr-button;
+	}
+
+	&::before
+	{
+		position: absolute;
+		top: 5px;
+		left: 8px;
+
+
+		width: 21px;
+		height: 21px;
+
+		display: block;
+
+		content: '';
+
+		background: no-repeat;
+	}
+
+	/*transition: background-color 1.6s cubic-bezier(0.2, 1, 0.3, 1);
+
+	&:hover
+	{
+		background-color: lighten(@clr-button, 20%);
+
+		transition: background-color .5s cubic-bezier(0.2, 1, 0.3, 1);
+	}*/
+}

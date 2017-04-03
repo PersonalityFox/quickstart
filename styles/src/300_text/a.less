@@ -1,0 +1,24 @@
+a
+{
+	@clr-link: @clr-fg;
+	
+	text-decoration: underline;
+	
+	color: @clr-link;
+
+	outline: none;
+	
+	&[href]:hover
+	{
+		color: @clr-main;
+
+		text-decoration: underline;
+
+		outline: none;
+	}
+
+	&:focus
+	{
+		outline: none;
+	}
+}

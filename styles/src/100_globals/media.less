@@ -1,0 +1,17 @@
+@mq-desktop-mode: ~"screen and (min-width: @{screen-width-small})";
+@smaller-than-screen-width-small: (@screen-width-small - 1);
+@mq-mobile-mode: ~"screen and (max-width: @{smaller-than-screen-width-small})"; //max-width 1023px
+
+@mq-desktop-big: ~"screen and (min-width: @{screen-width-big})";
+@smaller-than-screen-width-big: (@screen-width-big - 1);
+@mq-desktop-small: ~"screen and (max-width: @{smaller-than-screen-width-big})";
+
+@smaller-than-screen-width-big: (@screen-width-medium - 1);
+@mq-desktop-medium: ~"screen and (max-width: @{smaller-than-screen-width-big})";
+
+@mq-mobile-big: ~"screen and (min-width: @{screen-width-mobile-big})";
+@smaller-than-screen-width-mobile-big: (@screen-width-mobile-big - 1);
+@mq-mobile-small: ~"screen and (max-width: @{smaller-than-screen-width-mobile-big})";
+
+@screen-max-big: (@screen-width-biggest - 1);
+@mq-desktop-biggers: ~"screen and (max-width: @{screen-max-big})";

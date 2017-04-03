@@ -1,0 +1,599 @@
+&.main
+{
+	@logo-width: 150px;
+	
+	position: relative;
+
+	display: block;
+
+	width: 1400px;
+	height: 170px;
+	margin: 0 auto;
+	padding: 0;
+	
+	font-family: @font-OpenSans;
+	
+	> h1
+	{
+		position: relative;
+		z-index: 1;
+		float: left;
+		
+		width: @logo-width;
+		height: 170px;
+		
+		margin: 0;
+		padding: 0;
+		
+		//overflow: hidden;
+		
+		//text-indent: -400px;
+		
+		//font-size: 0;
+		
+		font-family: @font-Roboto;
+		
+		&::before
+		{
+			position: relative;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			display: block;
+			width: 150px;
+			height: 170px;
+			background: url("/styles/images/logo/logo-square=shadow.svg") no-repeat;
+			content: '';
+		}
+		
+		
+		
+		> a
+		{
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			
+			display: block;
+			width: 100%;
+			height: 170px;
+			padding: 20px 10px;
+			
+			white-space: normal;
+			text-decoration: none;
+			box-sizing: border-box;
+			
+			transition: background .3s ease, left .3s ease;
+			
+			color: @clr-bg;
+			
+			&::before
+			{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				z-index: -1;
+				display: block;
+				width: 100%;
+				height: 170px;
+				
+				content: '';
+				
+				background: fade(@clr-bg, 20%);
+				
+				transition: background .3s ease, left .3s ease;
+			}
+			
+			&::after
+			{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				z-index:-1;
+				display: block;
+				width: 0;
+				height: 0;
+				border-bottom: 90px solid darken(@clr-main, 13%);
+				border-right: 90px solid transparent;
+				
+				content: '';
+				
+				transition: background .3s ease, left .3s ease;
+			}
+		}
+		
+		&:hover
+		{
+			
+			> a
+			{
+				&:before
+				{
+					background: @clr-main;
+				}
+				&:after
+				{
+					left: 0;
+				}
+				left: 150px;
+				
+				color: @clr-bg;
+				text-decoration: none;
+				
+				transition: background .3s ease, left .3s ease;
+			}
+		}
+	}
+	
+	> ul
+	{
+		@width: (1400px - @logo-width);
+		
+		display: inline-block;
+		
+		width: @width;
+		margin: 0;
+		padding: 0 0 0 30px;
+		
+		vertical-align: top;
+		list-style: none;
+		
+		box-sizing: border-box;
+		
+		> li
+		{
+			display: inline-block;
+			
+			height: 100%;
+			
+			padding: 0;
+			margin: 0;
+			
+			box-sizing: border-box;
+			
+			> a
+			{
+				box-sizing: border-box;
+				
+				height: 100%;
+				text-decoration: none;
+				
+				font-family: @font-OpenSans;
+				
+				vertical-align: top;
+			}
+			> button
+			{
+				.mixin-reset-button();
+				
+				box-sizing: border-box;
+				height: 100%;
+				
+				text-decoration: none;
+				
+				font-family: @font-OpenSans;
+				vertical-align: top;
+				cursor: pointer;
+			}
+		}
+		
+		&.second-level
+		{
+			height: 60px;
+			
+			background: @clr-bg-grey;
+			
+			> li
+			{
+				> a
+				{
+					font-size: 16px;
+					padding: 20px;
+					
+					line-height: 60px;
+				}
+				> button
+				{
+					padding: 20px;
+					
+					font-size: 16px;
+					//line-height: 60px;
+				}
+				&.login
+				{
+					float: right;
+					width: 150px;
+					
+					background: fade(@clr-nice-grey, 20%);
+					
+					&:hover
+					{
+						background:@clr-main;
+						
+						> a
+						{
+							text-decoration: none;
+						}
+					}
+					
+					> a
+					{
+						position: relative;
+						
+						width: 100%;
+						height: 100%;
+						display: block;
+						
+						color: @clr-bg;
+						
+						//text-indent: 33px;
+						
+						font-size: 16px;
+						text-transform: uppercase;
+						text-align: center;
+						line-height: 25px;
+						
+						text-indent: 30px;
+						
+						&::before
+						{
+							position: absolute;
+							top: 16px;
+							left: 20px;
+							display: block;
+							
+							width: 30px;
+							height: 30px;
+							
+							content:'';
+							background: url("/styles/images/icon/login.svg") no-repeat;
+						}
+					}
+				}
+				&.cabinet
+				{
+					position: relative;
+					
+					float: right;
+					width: 240px;
+					
+					background: fade(@clr-nice-grey, 25%);
+					
+					transition: background .3s ease;
+					
+					&:hover
+					{
+						background:@clr-main;
+						
+						> ul.cabinet
+						{
+							top: 60px;
+							visibility: visible;
+							opacity: 1;
+						}
+					}
+					
+					> span
+					{
+						position: relative;
+						
+						width: 100%;
+						height: 100%;
+						display: block;
+						
+						color: @clr-bg;
+						
+						//text-indent: 33px;
+						
+						font-size: 16px;
+						text-transform: uppercase;
+						text-align: center;
+						line-height: 60px;
+						
+						text-indent: 40px;
+						
+						&::before
+						{
+							position: absolute;
+							top: 16px;
+							left: 20px;
+							display: block;
+							
+							width: 30px;
+							height: 30px;
+							
+							content:'';
+							background: url("/styles/images/icon/login.svg") no-repeat;
+						}
+					}
+					
+					> ul.cabinet
+					{
+						position: absolute;
+						top: 40px;
+						left: 0;
+						z-index: 2;
+						
+						width: 240px;
+						padding: 20px 20px 15px;
+						
+						box-sizing: border-box;
+						
+						list-style:none;
+						
+						visibility: hidden;
+						opacity: 0;
+						
+						background: white;
+						
+						.mixin-shadow-block();
+						
+						border: 1px solid @clr-not-important-text;
+						
+						transition: top .3s ease,opacity .3s ease;
+						
+						> li
+						{
+							margin-bottom: 5px;
+							
+							&.cars,
+							&.orders
+							{
+								pointer-events: none;
+								
+								> a
+								{
+									color: @clr-not-important-text;
+								}
+							}
+							> a
+							{
+								text-decoration: none;
+							}
+						}
+					}
+				}
+				&.order
+				{
+					float: right;
+					width: 245px;
+					
+					background: @clr-nice-grey;
+					
+					transition: background .3s ease;
+					
+					&:hover
+					{
+						background:@clr-main;
+					}
+					> button
+					{
+						position: relative;
+						
+						width: 100%;
+						
+						color: @clr-bg;
+						
+						text-indent: 33px;
+						
+						font-size: 16px;
+						text-transform: uppercase;
+						
+						&::before
+						{
+							position: absolute;
+							top: 18px;
+							left: 15px;
+							display: block;
+							
+							width: 34px;
+							height: 24px;
+							
+							content:'';
+							background: url("/styles/images/icon/engine-roll.svg") no-repeat;
+						}
+					}
+				}
+				&.basket
+				{
+					position: relative;
+					
+					float: right;
+					width: 200px;
+					
+					background: fade(@clr-nice-grey, 15%);
+					
+					transition: background .3s ease;
+					
+					&:hover
+					{
+						background:@clr-main;
+					}
+					
+					> button
+					{
+						position: relative;
+						
+						width: 100%;
+						
+						color: @clr-bg;
+						
+						text-indent: 40px;
+						
+						font-size: 16px;
+						text-transform: uppercase;
+						
+						&::before
+						{
+							position: absolute;
+							top: 14px;
+							left: 18px;
+							display: block;
+							
+							width: 35px;
+							height: 35px;
+							
+							content:'';
+							background: url("/styles/images/icon/basket.svg") no-repeat;
+						}
+					}
+					
+					> span
+					{
+						position: absolute;
+						width: 100px;
+						height: 20px;
+						display: block;
+						
+						color: fade(@clr-bg, 70%);
+						
+						//text-indent: 33px;
+						
+						font-size: 12px;
+						text-transform: uppercase;
+						text-align: center;
+						
+						pointer-events: none;
+						
+						&.empty
+						{
+							top: 37px;
+							right: 12px;
+						}
+					}
+				}
+			}
+		}
+		&.chief-level
+		{
+			height: 110px;
+			
+			> li
+			{
+				margin-right: 30px;
+				font-size: 18px;
+				line-height: 110px;
+				vertical-align: top;
+				
+				&:last-of-type
+				{
+					margin-right: 0;
+				}
+				&.catalog
+				{
+					padding: 0 20px;
+					
+					cursor: pointer;
+				}
+				
+				> a
+				{
+					display: block;
+					
+					height: 110px;
+					padding: 0 20px;
+					line-height: 110px;
+					
+					cursor: pointer;
+					
+					font-size: 18px;
+				}
+				> button
+				{
+					padding: 0 20px;
+					
+					
+					font-size: 18px;
+					line-height: 110px;
+					//line-height: 60px;
+				}
+				
+				&.tel
+				{
+					float: right;
+					
+					width: 245px;
+					height: 100%;
+					
+					position: relative;
+					
+					> button
+					{
+						position: relative;
+						width: 100%;
+						height: 100%;
+						
+						display: block;
+						
+						padding: 0 0 0 100px;
+						margin: 0;
+						
+						box-sizing: border-box;
+						
+						font-size: 16px;
+						font-weight: 700;
+						
+						&::before
+						{
+							position: absolute;
+							top: 33px;
+							left: 41px;
+							z-index: 1;
+							display: block;
+							
+							width: 70px;
+							height: 70px;
+							
+							content:'';
+							background: url("/styles/images/icon/hand-with-phone.svg") no-repeat;
+							background-size: 28px;
+							
+							transform: rotate(-20deg);
+						}
+						&::after
+						{
+							position: absolute;
+							top: 26px;
+							left: 24px;
+							z-index: 0;
+							display: block;
+							
+							width: 55px;
+							height: 55px;
+							
+							content:'';
+							background: @clr-main;
+							border-radius:50%;
+						}
+						
+						> span
+						{
+							position: absolute;
+							bottom: 10px;
+							left: 100px;
+							width: 160px;
+							text-align: left;
+							
+							
+							&.text
+							{
+								bottom: -10px;
+								font-size: 14px;
+								font-weight: 400;
+								
+								color: @clr-main;
+							}
+						}
+						
+					}
+				}
+			}
+		}
+	}
+
+	@media @mq-mobile-small
+	{
+		
+	}
+}

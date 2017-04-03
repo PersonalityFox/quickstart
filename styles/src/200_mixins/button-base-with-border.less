@@ -1,0 +1,54 @@
+.mixin-button-base-with-border()
+{
+	@height: ( @module * 2.5 ) - ( @button-weigth * 2 );
+	@height-mobile: round(@module * 1.75);
+	@padding: @module * 1.5;
+	@min-width: @module * 5;
+	@max-width: @module * 14;
+	@button-weigth: 4px; 
+	
+	@text-button: 15px;
+	@text-button-mobile: 14px;
+	
+	@clr-text: @clr-bg;
+	@clr-button: @clr-theme-secondary-1;
+	
+	display: inline-block;
+	overflow: hidden;
+	
+	height: @height;
+	min-width: @min-width;
+	max-width: @max-width;
+	padding: 0 @padding;
+	
+	font-size: @text-button;
+	font-weight: @weight-font-regular;
+	letter-spacing: .07em;
+	line-height: @height;
+	white-space: nowrap;
+	text-align: center;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	text-transform: uppercase;
+	
+	color: @clr-text;
+	background: none;
+	outline: none;
+	
+	border: 4px solid @clr-button;
+	
+	transition: background 1.6s cubic-bezier(0.2, 1, 0.3, 1),
+		border 1.6s cubic-bezier(0.2, 1, 0.3, 1),
+		color 1.6s cubic-bezier(0.2, 1, 0.3, 1);
+	
+	&:hover
+	{
+		background-color: lighten(@clr-button, 20%);
+		
+		border-color: lighten(@clr-button, 20%);
+		
+		transition: background-color .5s cubic-bezier(0.2, 1, 0.3, 1),
+			border-color .5s cubic-bezier(0.2, 1, 0.3, 1),
+			color 1.6s cubic-bezier(0.2, 1, 0.3, 1);
+	}
+}

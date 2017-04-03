@@ -1,0 +1,57 @@
+> div.lightbox.call-me
+{
+	position: fixed;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	
+	display: block;
+	
+	width: 450px;
+	height: 230px;
+	margin: auto;
+	padding: 20px;
+	
+	overflow-x: hidden;
+	overflow-y: auto;
+	
+	background: @clr-bg;
+	
+	box-sizing: border-box;
+	
+	&.hide
+	{
+		display: none;
+	}
+	> label
+	{
+		display: block;
+	}
+	> input
+	{
+		display: block;
+		
+		//height: 150px;
+		width: 200px;
+		margin: 10px 0 30px;
+		padding: 5px 15px;
+		
+		font-size: 16px;
+	}
+	
+	> button
+	{
+		.mixin-reset-button();
+		
+		background: @clr-main;
+		font-size: 16px;
+		color: @clr-bg;
+		
+		padding: 7px 15px;
+		border-radius: 40px;
+		
+		cursor: pointer;
+	}
+}

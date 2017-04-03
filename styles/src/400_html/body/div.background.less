@@ -1,0 +1,76 @@
+> div.background
+{
+	// Затемнение при лайтбоксах
+	visibility: visible;
+	opacity: 1;
+
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1;
+
+	display: block;
+
+	width: 100%;
+	height: 100%;
+
+	margin: auto;
+
+	background: fade(@clr-fg, 50%);
+
+	&.hide
+	{
+		display: none;
+	}
+}
+> div.background-map
+{
+	// Затемнение при лайтбоксах
+	visibility: visible;
+	opacity: 1;
+
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1;
+
+	display: block;
+
+	width: 100%;
+	height: 100%;
+
+	margin: auto;
+
+	background: fade(@clr-fg, 50%);
+}
+> div.background-secure
+{
+	// Затемнение при лайтбоксах
+	visibility: visible;
+	opacity: 1;
+
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 10;
+
+	display: block;
+
+	width: 100%;
+	height: 100%;
+
+	margin: auto;
+
+	background: fade(@clr-fg, 50%);
+
+	&.hide
+	{
+		display: none;
+	}
+}

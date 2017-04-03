@@ -1,0 +1,80 @@
+&.images
+{
+	@logo-width: 150px;
+	
+	position: relative;
+	
+	display: block;
+	
+	width: 1400px;
+	height: 600px;
+	margin: 0 auto;
+	padding: 0;
+	
+	font-family: @font-OpenSans;
+	
+	background-image: url("/styles/images/background/car-engine.jpeg");
+	background-repeat: no-repeat;
+	object-fit: cover;
+	background-size: 1400px;
+	
+	&::after
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		
+		display: block;
+		
+		width: 100%;
+		height: 100%;
+		
+		content: '';
+		background: fade(@clr-fg, 70%);
+	}
+	
+	> h2
+	{
+		position: relative;
+		z-index: 1;
+		
+		display: block;
+		
+		//width: 500px;
+		margin: 0 auto;
+		padding: 180px 0 20px 0;
+		
+		font-family: @font-Roboto;
+		font-size: 35px;
+		font-weight: 700;
+		text-align: center;
+		
+		color: @clr-bg;
+		
+		text-transform: uppercase;
+	}
+	
+	> p
+	{
+		position: relative;
+		z-index: 1;
+		display: block;
+		
+		width: 700px;
+		margin: 0 auto;
+		padding: 0;
+		
+		font-family: @font-OpenSans;
+		font-size: 18px;
+		font-weight: 400;
+		color: @clr-bg;
+		
+		text-align: center;
+	}
+	
+	@media @mq-mobile-small
+	{
+		
+	}
+}
