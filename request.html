@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf8" />
+	<title>Test page</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	
+	<link rel="stylesheet" type="text/css" href="styles/basic.css" />
+	<link rel="stylesheet" type="text/css" href="styles/common.css" />
+	
+	<meta http-equiv="content-language" content="ru" />
+</head>
+<body>
+	<!--<header class="header">-->
+		<!--<div class="logo">-->
+			<!--{{#link 'help_center'}}-->
+			<!--<img src="{{logo_url}}" alt="{{t 'logo'}}">-->
+			<!--{{/link}}-->
+		<!--</div>-->
+		<!--<div class="nav-wrapper">-->
+			<!--<span class="icon-menu"></span>-->
+			<!--<nav class="user-nav" id="user-nav">-->
+				<!--{{link 'community'}}-->
+				<!--{{link 'new_request' class='submit-a-request'}}-->
+				<!--{{#link 'identifier'}}-->
+				<!--Link text-->
+				<!--{{else}}-->
+				<!--This link is not available for you-->
+				<!--{{/link}}-->
+			<!--</nav>-->
+			<!--{{user_info}}-->
+		<!--</div>-->
+	<!--</header>-->
+	<header class="main">
+		<div class="logo" role="banner">
+			<a title="Home" href="http://teenmegaworld.net/">
+				<img src="images/logo_tmw.png" alt="Logo">
+			</a>
+		</div>
+		<div class="nav-wrapper">
+			<span class="icon-menu"></span>
+			<ul class="user-nav" id="user-nav">
+				
+				<li class="join-now"><a href="">Join now</a></li>
+				<li><a href="">Login</a></li>
+				<li><a href="http://teenmegaworld.net/tour2/sites">Sites</a></li>
+				<li><a href="http://teenmegaworld.net/tour2/updates">Videos</a></li>
+				<li><a href="http://teenmegaworld.net/tour2/models">Girls</a></li>
+				<li class="user"><div id="user" class="user-info dropdown" data-helper="user_info">
+					<div class="btn with-image dropdown-toggle" role="button">
+						<img id="user-avatar" class="user-avatar" alt="Sandra Smith" src="https://royal-cs.zendesk.com/system/photos/0001/3181/6849/sandra1.jpg">
+						<span id="user-name">Sandra Smith</span>
+					</div>
+				</div></li>
+				
+			</ul>
+			<button class="close-menu" type="button">Close</button>
+		</div>
+	</header>
+	<main role="main">
+		<a href="index.html">index</a>
+		<section class="section hero">
+		
+		</section>
+		<section class="form" data-page="request">
+			<h2>Customer Support</h2>
+				
+			<form id="new_request" data-form="" class="request-form" action="/hc/en-us/requests"
+			      accept-charset="UTF-8" method="post">
+				<input name="utf8" type="hidden" value="✓">
+				<input
+					type="hidden" name="authenticity_token"
+					value="Bx9nkptV5jyA3MIFcwpkXjhsYeVs8KQeCW4ps7KC/MHiTXxu4lEsF3xFwojzlhO1oJdQt8bfPLZyttX0boBbOw==">
+				
+				<!--<div class="form-field string  required  request_name">
+					<label for="request_name">Name</label>
+					<input type="text" name="request[name]" id="request_name" maxlength="150" size="150">
+				</div>
+				<div class="form-field string  required  request_username">
+					<label for="request_username">Username</label>
+					<input type="text" name="request[username]" id="request_username" maxlength="150" size="150">
+				</div>-->
+				
+				
+				
+				<div class="form-field string required request_anonymous_requester_email">
+					<label for="request_anonymous_requester_email">Your email address</label>
+					<input type="text" name="request[anonymous_requester_email]" id="request_anonymous_requester_email">
+				</div>
+				<!--<div class="form-field string  required  request_pass">
+					<label for="request_pass">Password</label>
+					<input type="text" name="request[pass]" id="request_pass" maxlength="150" size="150">
+				</div>-->
+				
+				
+				<div class="form-field string  required  request_subject">
+					<label for="request_subject">Subject</label>
+					<input type="text" name="request[subject]" id="request_subject" maxlength="150" size="150">
+				</div>
+				<!--<div class="form-field string    request_subscription_member_id">
+					<label for="request_subscription_member_id">Subscription/Member ID</label>
+					<input type="text" name="request[memberid]" id="request_subscription_member_id" maxlength="150" size="150">
+				</div>
+				
+				
+				<div class="form-field string  required  request_billing">
+					<label for="request_billing">Billing</label>
+					<select name="request[billing]" id="request_billing">
+						<option value=""></option>
+						<option>Epoch</option>
+						<option>2000Charge</option>
+						<option>Segpay</option>
+						<option>WTS</option>
+						<option>Vendo</option>
+						<option>Verotel</option>
+					</select>
+				</div>
+				<div class="form-field string  required  request_website">
+					<label for="request_website">Website</label>
+					<select name="request[website]" id="request_website">
+						<option value=""></option>
+						<option>18 First Sex</option>
+						<option>About Girls Love</option>
+						<option>Anal Angels</option>
+						<option>Anal Beauty</option>
+						<option>ATMovs</option>
+						<option>Badex GFs</option>
+						<option>Beauty Angels</option>
+						<option>Beauty4K.com</option>
+						<option>Boys-Love</option>
+						<option>Creampie Angels</option>
+						<option>Dirty Coach</option>
+						<option>Dirty Doctor</option>
+						<option>Drunk Home Party</option>
+						<option>Drunken Teen Orgies</option>
+						<option>ExGfBox</option>
+						<option>FirstBGG</option>
+						<option>Fuck Studies</option>
+						<option>Gag-n-Gape</option>
+						<option>Home Porn Bay</option>
+						<option>Home Teen Vids</option>
+						<option>Home Toy Teens</option>
+						<option>iTeenVideo</option>
+						<option>Latin Shemales</option>
+						<option>Lolly Hardcore</option>
+						<option>No Boring</option>
+						<option>Nubile Girls HD</option>
+						<option>NylonsX</option>
+						<option>Old-n-Young</option>
+						<option>Private Teen Video</option>
+						<option>Shemale Access</option>
+						<option>Solo Teen Girls</option>
+						<option>Squirting Virgin</option>
+						<option>Teen Mega World</option>
+						<option>Teen Sex Mania</option>
+						<option>Teen Sex Movs</option>
+						<option>Teen Stars Only</option>
+						<option>Teens 3 Some</option>
+						<option>TinyTeens18.com</option>
+						<option>TMW Mobile</option>
+						<option>TmwVRnet</option>
+						<option>Tricky Masseur</option>
+						<option>Watch Me Fucked</option>
+						<option>WMB Girls</option>
+						<option>WOW Orgasms</option>
+						<option>X-Angels.com</option>
+					</select>
+				</div>-->
+				
+				
+				<div class="suggestion-list" data-hc-class="searchbox" data-hc-suggestion-list="true"></div>
+				
+				<div class="form-field text  required  request_description">
+					<label for="request_description">Description</label>
+					<textarea name="request[description]" id="request_description"></textarea>
+					<p>Please enter the details of your request. A member of our support staff will respond as
+						soon as possible.</p>
+				</div>
+				
+				<div class="form-field">
+					<label>Attachments</label>
+					<div id="upload-dropzone" class="upload-dropzone">
+						<input type="file" multiple="true" id="request-attachments" data-fileupload="true"
+						       data-dropzone="upload-dropzone" data-error="upload-error"
+						       data-create-url="/hc/en-us/request_uploads" data-name="request[attachments][]"
+						       data-pool="request-attachments-pool" data-delete-confirm-msg="">
+						<span><a>Add file</a> or drop files here</span>
+					</div>
+					
+					<div id="upload-error" class="notification notification-error notification-inline"
+					     style="display: none;">
+						<span data-upload-error-message=""></span>
+					</div>
+					
+					<ul id="request-attachments-pool" class="upload-pool" data-template="upload-template"></ul>
+					
+				</div>
+				
+				<footer>
+					<button type="button" class="submit-form">Submit</button>
+					<input type="submit" name="commit" value="Submit">
+				</footer>
+			</form>
+			
+		</section>
+	</main>
+	
+	
+	<script src="scripts/common.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-sham.min.js"></script>
+</body>
+</html>

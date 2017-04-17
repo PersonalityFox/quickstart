@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf8" />
+	<title>Test page</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	
+	<link rel="stylesheet" type="text/css" href="styles/basic.css" />
+	<link rel="stylesheet" type="text/css" href="styles/common.css" />
+	
+	<meta http-equiv="content-language" content="ru" />
+</head>
+<body>
+	<!--<header class="header">-->
+		<!--<div class="logo">-->
+			<!--{{#link 'help_center'}}-->
+			<!--<img src="{{logo_url}}" alt="{{t 'logo'}}">-->
+			<!--{{/link}}-->
+		<!--</div>-->
+		<!--<div class="nav-wrapper">-->
+			<!--<span class="icon-menu"></span>-->
+			<!--<nav class="user-nav" id="user-nav">-->
+				<!--{{link 'community'}}-->
+				<!--{{link 'new_request' class='submit-a-request'}}-->
+				<!--{{#link 'identifier'}}-->
+				<!--Link text-->
+				<!--{{else}}-->
+				<!--This link is not available for you-->
+				<!--{{/link}}-->
+			<!--</nav>-->
+			<!--{{user_info}}-->
+		<!--</div>-->
+	<!--</header>-->
+	
+	<header class="main">
+		<div class="logo" role="banner">
+			<a title="Home" href="http://teenmegaworld.net/">
+				<img src="images/logo_tmw.png" alt="Logo">
+			</a>
+		</div>
+		<div class="nav-wrapper">
+			<span class="icon-menu"></span>
+			<ul class="user-nav" id="user-nav">
+				
+				<li class="back"><a href="">Вернуться назад</a></li>
+				<li class="join-now"><a href="">Join now</a></li>
+				<li><a href="">Login</a></li>
+				<li><a href="http://teenmegaworld.net/tour2/sites">Sites</a></li>
+				<li><a href="http://teenmegaworld.net/tour2/updates">Videos</a></li>
+				<li><a href="http://teenmegaworld.net/tour2/models">Girls</a></li>
+				<li class="user"><div id="user" class="user-info dropdown" data-helper="user_info">
+					<div class="btn with-image dropdown-toggle" role="button">
+						<img id="user-avatar" class="user-avatar" alt="Sandra Smith" src="https://royal-cs.zendesk.com/system/photos/0001/3181/6849/sandra1.jpg">
+						<span id="user-name">Sandra Smith</span>
+					</div>
+				</div></li>
+				
+			</ul>
+			<button class="close-menu" type="button">Close</button>
+		</div>
+	</header>
+	<main role="main">
+		<a href="request.html">request</a>
+		<section class="section hero" data-type="background" data-speed="0.7" >
+			<div class="overflow"></div>
+		</section>
+		
+		
+		
+		<section class="faq tabs" data-type="text" data-speed="20" >
+			<h2>Frequently Asked Questions</h2>
+			<p>Our goal is&nbsp;to&nbsp;provide the best web experience anywhere. We&nbsp;pride ourselves on&nbsp;providing cutting edge technological solutions and usable attractive websites. We&nbsp;don&rsquo;t stop there! Customer support is&nbsp;where we&nbsp;really pull away from the competition. Please use this site to&nbsp;find the answers to&nbsp;any and all the questions you may have regarding the various ways to&nbsp;watch our movies, our current updates, billing concerns, and any other inquiry you may have. This dedicated customer support site is&nbsp;packed with individual service and helpful information. Please feel free to&nbsp;utilize our site. We&nbsp;are here for your support.</p>
+			<div class="header">
+				<ul class="tabs">
+					<li class="general active" data-tab="1">
+						<button type="button"><span>General</span></button>
+					</li><li class="technical" data-tab="2">
+						<button type="button"><span>Technical</span></button>
+					</li><li class="membership" data-tab="3">
+						<button type="button"><span>Membership</span></button>
+					</li><li class="vr" data-tab="4">
+						<button type="button"><span>Virtual Reality</span></button>
+					</li>
+				</ul>
+				<!--<select class="button-list"  id="categories">
+					<option data-tab="1" value="General question">General question</option>
+					<option data-tab="2" value="Membership">Membership</option>
+					<option data-tab="3" value="Contact support">Contact support</option>
+					<option data-tab="4" value="VR question">VR question</option>
+				</select>-->
+			</div>
+			
+			<ul class="content">
+				<li class="general active panel-group" data-tab="1" >
+					<ul class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					
+					</ul>
+				</li>
+				<li class="technical" data-tab="2">
+					<ul id="accordion-four" class="panel-group" role="tablist" aria-multiselectable="true">
+					
+					</ul>
+				</li><li class="membership" data-tab="3">
+					<ul id="accordion-two" class="panel-group" role="tablist" aria-multiselectable="true">
+					
+					</ul>
+				</li><li class="vr" data-tab="4">
+					<ul id="accordion-three" class="panel-group" role="tablist" aria-multiselectable="true">
+					
+					</ul>
+				</li>
+			</ul>
+			
+			<!--<ul class="panel-group" role="tablist">
+				<li class="panel panel-default">
+					<div class="panel-heading" role="tab">
+						<h4 class="panel-title">
+							<a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="false">
+								Collapsible Group Item #1
+							</a>
+						</h4>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse" role="tabpanel">
+						<div class="panel-body">
+							Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+						</div>
+					</div>
+				</li>
+				<li class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingTwo">
+						<h4 class="panel-title">
+							<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								Collapsible Group Item #2
+							</a>
+						</h4>
+					</div>
+					<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+						<div class="panel-body">
+							Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+						</div>
+					</div>
+				</li>
+				<li class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingThree">
+						<h4 class="panel-title">
+							<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								Collapsible Group Item #3
+							</a>
+						</h4>
+					</div>
+					<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						<div class="panel-body">
+							Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+						</div>
+					</div>
+				</li>
+			</ul>-->
+			
+			
+		</section>
+		
+		<ul class="information">
+			<li>
+				<a href="request.html">
+					<h3>Didn't find the answer?</h3>
+					<img src="http://lorempixel.com/500/300/cats/" />
+					<p>Contact support</p>
+				</a>
+			</li><li class="billing">
+				<a type="button" href="">
+					<h3>Dummy text</h3>
+					<img src="http://lorempixel.com/500/300/animals/" />
+					<p>Значимость этих проблем настолько очевидна.</p>
+				</a>
+			</li>
+		</ul>
+		
+		<section class="billing hide">
+			<button type="button" class="go-back">F.A.Q.</button>
+		</section>
+	</main>
+	<footer>
+		<ul class="links">
+			<li>
+				<a href="http://teenmegaworld.net/privacy.html" >Privacy</a>
+			</li><li>
+				<a href="http://teenmegaworld.net/terms.html" >Terms & Conditions</a>
+			</li><li>
+				<a href="http://www.royal-cash.com" >Affilate</a>
+			</li>
+		</ul>
+		<!--<ul class="about">
+			<li>S & S Royal Limited</li>
+			<li>Meli Charalambous 29, P.C. 3117, Limassol, Cyprus</li>
+			<li>Royal-CS.com</li>
+		</ul>-->
+		<div class="about">
+		
+		</div>
+	</footer>
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"
+		crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="scripts/common.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-sham.min.js"></script>
+	
+	<script>
+		$(document).ready(function () {
+			
+			/*var elFade = document.querySelector('div.overflow');
+			// Cache the Window object
+			$window = $(window);
+			
+			$('section[data-type="background"]').each(function ()
+			{
+				var $bgobj = $(this); // assigning the object
+				
+				// Use the cached window object here
+				$window.scroll(function ()
+				{
+					// Use the cached window object here
+					var scrTop = $window.scrollTop();
+					var yPos = -( scrTop / $bgobj.data('speed') );
+					var opacity = scrTop / $bgobj[0].offsetHeight;
+					
+					// Your code here
+					//div.overflow
+					// Put together our final background position
+					var coords = '50% ' + yPos + 'px';
+					elFade.style.opacity = opacity>=1 ? 1 : opacity;
+					
+					// Move the background
+					$bgobj.css({ backgroundPosition: coords });
+				});
+			});*/
+			
+		});
+	</script>
+
+</body>
+</html>

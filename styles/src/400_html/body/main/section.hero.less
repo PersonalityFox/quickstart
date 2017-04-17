@@ -1,0 +1,46 @@
+> section.hero
+{
+	position: relative;
+	
+	width: 100%;
+	height: 600px;
+	padding: 0 20px;
+	
+	text-align: center;
+	
+	/*background-image: url(//p3.zdassets.com/hc/settings_assets/1338409/115000007749/7qq4d7dGV7KsgHRDKLZrug-header.jpg);
+	background-position: center;
+	background-size: cover;*/
+	
+	//background: indianred;
+	
+	//background: url('../images/kitteh2.jpg') 50% -10px repeat fixed;
+	//background-image: url('../images/kitteh2.jpg');
+	background-position: 50% -10px;
+	background-repeat: repeat;
+	background-attachment: fixed;
+	
+	//background-position: center;
+	background-size: cover;
+	
+	> div.overflow
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		
+		display: block;
+		
+		width: 100%;
+		height: 100%;
+		
+		/*background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+		background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+		background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );*/
+		
+		background: @clr-bg;
+		
+		opacity: 0.2;
+	}
+}

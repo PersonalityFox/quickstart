@@ -1,0 +1,477 @@
+&
+{
+	@clr-main-bg: #f2f3f7;
+	
+	position: relative;
+	z-index: 0;
+	
+	display: block;
+	
+	width: @screen-width-medium;
+	max-width: 100%;
+	margin: 0 auto 500px;
+	padding: 30px 30px;
+	
+	box-sizing: border-box;
+	
+	font-family: @font-basic;
+	
+	&::before
+	{
+		.mixin-pseudo-element();
+		
+		top: 0;
+		left: 0;
+		z-index: -1;
+		
+		display: block;
+		
+		width: 100%;
+		height: 100%;
+		
+		background: @clr-bg;
+		
+		border-radius: 4px;
+		
+		-webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+		-moz-box-shadow:    0 2px 10px 0 rgba(0, 0, 0, 0.3);
+		box-shadow:         0 2px 10px 0 rgba(0, 0, 0, 0.3);
+	}
+	
+	> h2
+	{
+		display: block;
+		
+		width: 100%;
+		margin-bottom: 0;
+		
+		font-family: @font-basic;
+		font-size: 35px;
+		font-weight: 300;
+	}
+	
+	> form
+	{
+		> div
+		{
+			position: relative;
+			
+			> a.nesty-input
+			{
+				height: 42px;
+			}
+			
+			> label
+			{
+				font-size: 16px;
+				font-weight: 500;
+			}
+			
+			> p
+			{
+				font-size: 14px;
+			}
+			
+			> select
+			{
+				padding: 9px 30px 10px 10px;
+			}
+			
+			> div.notification-error
+			{
+				position: absolute;
+				width: 50%;
+				top: -10px;
+				right: 0;
+			}
+		}
+		
+		> div.request_subject > input,
+		> div.suggestion-list
+		{
+			display: none;
+		}
+		
+		> div.request_anonymous_requester_email,
+		> div.request_name,
+		> div.request_subject,
+		> div.request_billing
+		{
+			display: inline-block;
+			
+			width: 40%;
+			margin-right: 4.5%;
+		}
+		
+		> div.request_username,
+		> div.request_password,
+		> div.request_subscription_member_id,
+		> div.request_website
+		{
+			display: inline-block;
+			
+			width: 55%;
+		}
+		
+		> div.request_member
+		{
+			position: relative;
+			
+			display: inline-block;
+			
+			width: 40%;
+			margin-right: 4.5%;
+			
+			min-height: 72px;
+			
+			> label
+			{
+				position: absolute;
+				top: 0;
+				left: 40px;
+				z-index: 1;
+				
+				display: inline;
+				
+				margin: auto;
+				
+				height: 72px;
+				line-height: 72px;
+				
+				&::before
+				{
+					.mixin-pseudo-element();
+					
+					top: 30px;
+					left: -30px;
+					
+					width: 20px;
+					height: 20px;
+					
+					background: fade(@clr-fg, 5%);
+					
+					border: 1px solid fade(@clr-fg, 40%);
+					
+					border-radius: 3px;
+				}
+				&::after
+				{
+					.mixin-pseudo-element();
+					
+					top: 34px;
+					left: -25px;
+					
+					width: 10px;
+					height: 8px;
+					
+					opacity: 0;
+					
+					border-bottom: 1px solid @clr-fg;
+					border-left: 1px solid @clr-fg;
+					transform: rotate(-45deg);
+				}
+			}
+			> input
+			{
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 2;
+				
+				width: 100%;
+				height: 100%;
+				
+				margin: 0;
+				
+				cursor: pointer;
+				
+				opacity: 0;
+				
+				&:checked + label
+				{
+					&::after
+					{
+						opacity: 1;
+					}
+				}
+			}
+		}
+		
+		> div:nth-last-of-type(1)
+		{
+			display: inline-block;
+			
+			margin: 0 3.5% 0 0;
+			
+			width: 80%;
+			vertical-align: top;
+		}
+		
+		> footer
+		{
+			display: inline-block;
+			
+			margin: 29px 0 0;
+			padding: 0;
+			
+			width: 15%;
+			min-width: 198px;
+			
+			vertical-align: top;
+			
+			> button
+			{
+				.mixin-reset-button();
+				
+				background: @clr-main;
+				
+				min-width: 190px;
+				max-width: 100%;
+				width: 100%;
+				height: 45px;
+				padding: 0 1.9286em;
+				
+				color: #fff;
+				
+				font-size: 18px;
+				font-weight: 400;
+				line-height: 47px;
+				box-sizing: border-box;
+				outline: none;
+				cursor: pointer;
+				
+				border-radius: 4px;
+				
+				transition: border .12s ease-in-out;
+			}
+			> input
+			{
+				display: none;
+			}
+		}
+		
+		&.full-form
+		{
+			
+			> div.request_subscription_member_id
+			{
+				width: 26.25%;
+				margin-right: 2.5%;
+			}
+			> div.request_billing
+			{
+				width: 26.25%;
+				margin-right: 0;
+			}
+			
+			> div.request_member
+			{
+				min-height: 55px;
+			}
+		}
+		
+		&:not(.full-form)
+		{
+			&::after
+			{
+				.mixin-pseudo-element();
+				
+				top: 105px;
+				right: 36px;
+				
+				width: 52.6%;
+				height: 360px;
+				
+				background: url("http://placehold.it/700x360");
+				
+				object-fit: cover;
+			}
+			
+			> div.request_username,
+			> div.request_password,
+			> div.request_subscription_member_id,
+			> div.request_website,
+			> div.request_billing
+			{
+				display: none;
+			}
+			
+			> div.request_anonymous_requester_email,
+			> div.request_name,
+			> div.request_subject,
+			> div.request_member
+			{
+				display: block;
+			}
+			
+			> div.request_name
+			{
+				margin-top: 25px;
+			}
+		}
+	}
+	
+	@media @mq-desktop-medium
+	{
+		> form
+		{
+			position: relative;
+			
+			padding: 0;
+			
+			> div
+			{
+				margin-top: 15px;
+				
+				&:nth-last-of-type(1)
+				{
+					width: 75%;
+				}
+			}
+			> footer
+			{
+				position: absolute;
+				right: 0;
+				
+				min-width: 190px;
+			}
+			
+			&:not(.full-form)
+			{
+				&::after
+				{
+					top: -6px;
+				}
+			}
+		}
+	}
+	
+	@media @mq-mobile-mode
+	{
+		> form
+		{
+			&.full-form
+			{
+				
+				> div.request_subscription_member_id
+				{
+					width: 100%;
+					margin-right: 0;
+				}
+				> div.request_billing
+				{
+					width: 100%;
+				}
+				
+				> div.request_member
+				{
+					min-height: 55px;
+				}
+			}
+			
+			> div
+			{
+				> label
+				{
+					font-size: 14px;
+				}
+				
+				> input,
+				> select
+				{
+					padding: 6px 10px;
+				}
+			}
+			
+			> div.request_member
+			{
+				height: 61px;
+				min-height: 61px;
+				
+				> input,
+				> label
+				{
+					height: 61px;
+					line-height: 61px;
+				}
+				
+				> label
+				{
+					&::before
+					{
+						top: 20px;
+					}
+					&::after
+					{
+						top: 24px;
+					}
+				}
+			}
+			
+			> div.request_description
+			{
+				margin-top: 15px;
+			}
+			
+			> div.request_anonymous_requester_email,
+			> div.request_name,
+			> div.request_subject,
+			> div.request_billing,
+			> div.request_member
+			{
+				display: block;
+				
+				width: 100%;
+				margin-right: 0;
+			}
+			> div.request_username,
+			> div.request_password,
+			> div.request_subscription_member_id,
+			> div.request_website,
+			> div.request_billing
+			{
+				display: block;
+				
+				width: 100%;
+			}
+			
+			> div:nth-last-of-type(1)
+			{
+				display: block;
+				
+				width: 100%;
+			}
+			
+			> footer
+			{
+				position: inherit;
+				
+				display: block;
+				
+				width: 100%;
+				
+				> input
+				{
+					background-color: @clr-main;
+					font-size: 18px;
+					line-height: 47px;
+					height: 45px;
+					margin: 0;
+				}
+			}
+			
+			&:not(.full-form)
+			{
+				&::after
+				{
+					display: none;
+				}
+			}
+		}
+	}
+	
+	@media @mq-mobile-small
+	{
+		//padding: 50px 0 0;
+	}
+}
